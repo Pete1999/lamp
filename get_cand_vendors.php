@@ -19,14 +19,27 @@ $statement->execute();
 $sql = 'fetch all ccursor;';
 $res = $pdo->query($sql);
 $rset = $res->fetchAll();
-foreach($rset as $row){
- print $row['category'] . "\t";
- print $row['cand_vendor'] . "\t";
- print $row['alt_cand_vendor'] . "\t";
- print $row['vendor_cnt'] . "\t";
- print $row['category_vendor_cnt'] . "\n";
- 
-}
+?>
+<div id="content">
+<table class=list>
+<tr>
+	<th>Category</th>
+	<th>Cand Vendor</th>
+	<th>Alt Cand Vendor</th>
+	<th>Vendor Count</th>
+	<th>Category-Vendor Count</th>
+</tr>
+<?php foreach($rset as $row){ ?>
+     <tr>
+	 <td><?php print $row['category']; ?></td>
+	 <td><?php print $row['cand_vendor']; ?></td>
+	 <td><?php print $row['alt_cand_vendor']; ?></td>
+	 <td><?php print $row['vendor_cnt']; ?></td>
+	 <td><?php print $row['category_vendor_cnt']; ?></td>
+     </tr>
+<?php } ?>
+</table>
+</div>
 
 
 
