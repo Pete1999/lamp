@@ -1,6 +1,6 @@
 <?php
-$host = 'fedora';
-$db = 'shandbox';
+$host = 'localhost';
+$db = 'testdb';
 $user = 'peter';
 $password = 'oracle';
 
