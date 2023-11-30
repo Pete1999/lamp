@@ -7,7 +7,7 @@
   ini_set('display_errors', 'On');
 //  phpinfo();
   error_reporting(E_ALL);
-  require 'get_cand_vendors.php';
+  require 'get_cash_flow.php';
   
  ?>
  </body>
